@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta Pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="fontello-a540fdbf/css/fontello.css">
+    <a href="https://api.whatsapp.com/send/?phone=923871756"></a>
+</head>
+
+<body>
+    <!--ICONO DE WHATSAPP-->
+    <a href=https://api.whatsapp.com/send/?phone=923871756&text&type=phone_number&app_absent=0" class="btn-wsp  "
+        target="_blank">
+        <i class="icon-whatsapp"></i>
+    </a>
+    <!--MENU-->
+    <header class="menu d-flex justify-content-end">
+        <div class="col-lg-4">
+            <a href="index.html">
+                <img class=" d-block mb-1" alt="" src="img/logo.PNG" width="100" height="100">
+            </a>
+        </div>
+        <ul class="nav nav-pills col-lg-8 justify-content-end py-4">
+            <li class=" nav-item">
+                <a href="#" class="item-seleccionado nav-link" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item ">
+                <a href="index.html" class="item-menu nav-link"> Cerrar Sesión</a>
+            </li>
+
+        </ul>
+    </header>
+    <div class="row mi-cuenta" style="background-color: #C8C2F2;">
+        <div class="col-4 offset-md-2 d-flex justify-content-center p-3">
+            <img src="img/micuenta.png" style="width: 500px;height: 500px;">
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+                <div class="list-group list-group-checkable d-grid gap-2 border-0">
+                    <input class="list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios"
+                        id="listGroupCheckableRadios1" value="" checked="">
+                    <label class="list-group-item rounded-3 py-3 botones-micuenta" for="listGroupCheckableRadios1"
+                        data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onclick="abrirModal1('mensual')">
+                        Pagar Plan Mensual
+                        <span class="d-block small opacity-50">Acceso completo por 30 días - Renovación
+                            automática</span>
+                    </label>
+                    <input class="list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios"
+                        id="listGroupCheckableRadios2" value="">
+                    <label class="list-group-item rounded-3 py-3 " for="listGroupCheckableRadios2"
+                        onclick="abrirModal1('anual')">
+                        Pagar Plan Anual
+                        <span class="d-block small opacity-50 botones-micuenta">12 meses de acceso con 2 meses gratis -
+                            Mejor
+                            valor</span>
+                    </label>
+                    <input class=" list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios"
+                        id="listGroupCheckableRadios3" value="">
+                    <label onclick="document.getElementById('Historial').scrollIntoView({ behavior: 'smooth' });"
+                        class="list-group-item rounded-3 py-3 botones-micuenta" for="listGroupCheckableRadios3">
+                        Historial Medico
+                        <span class="d-block small opacity-50">Consulta el historial completo de tu mascota</span>
+                    </label>
+                    <input class="list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios"
+                        id="listGroupCheckableRadios3" value="">
+                    <label onclick="document.getElementById('Aliados').scrollIntoView({ behavior: 'smooth' });"
+                        class="list-group-item rounded-3 py-3 botones-micuenta" for="listGroupCheckableRadios3">
+                        Aliados
+                        <span class="d-block small opacity-50">Red de veterinarias y tiendas especializadas</span>
+                    </label>
+                    <input class="list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios"
+                        id="listGroupCheckableRadios3" value="">
+                    <label onclick="document.getElementById('Promociones').scrollIntoView({ behavior: 'smooth' });"
+                        class="list-group-item rounded-3 py-3 botones-micuenta" for="listGroupCheckableRadios3">
+                        Promociones Para Tu Mascota
+                        <span class="d-block small opacity-50">Descuentos exclusivos en productos y servicios</span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="background-color: #C2E9F2;">
+
+        <div class="col-lg-4 offset-md-4" style="color: #0E1140;">
+            <div id="Historial" class="col-12 mb-0 text-center">
+                <br>
+                <img src="img/Morronga.jpg" class="perfilpet">
+                <br>
+                <br>
+                <p class="h2">MORRONGA: 9 años</p>
+
+            </div>
+            <div class="col-12 p-2 text-center">
+                <p class="h4">EMERGENCIA: Ninguna</p>
+            </div>
+            <div class="col-12">
+                <p>DATOS DEL PACIENTE </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Raza: Romana</li>
+                    <li class="list-group-item">Sexo: Hembra </li>
+                    <li class="list-group-item">Edad: 9 Años</li>
+                    <li class="list-group-item">Color: Gris con blanco</li>
+                    <li class="list-group-item">Propietario: Ana López</li>
+                    <li class="list-group-item">DNI del propietario: 74563210</li>
+                    <li class="list-group-item">Teléfono: 987654321</li>
+                    <li class="list-group-item">Dirección: Av. Los Gatos 123, Lima</li>
+                </ul>
+                <br>
+                <br>
+                <p>ANTECEDENTES MEDICOS </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Procedencia: Rescatado de la calle a los 2 meses.</li>
+                    <li class="list-group-item">Desparasitación: Interna y externa realizada a los 2 meses y 4 meses
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <p>VACUNAS </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Triple felina: aplicada a los 2 y 3 meses.</li>
+                    <li class="list-group-item">Rabia: aplicada a los 4 meses.</li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div id="Promociones" class="container text-center">
+        <h2 class="pb-2 border-bottom">PROMOCIONES PARA MORRONGA</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 justify-content-center">
+
+            <!-- PROMO 1 -->
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary custom-bg bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi-heart-pulse" viewBox="0 0 16 16">
+                        <path d=" m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508
+                        7H.43c-2.128-5.697 4.165-8.83 7.394-5.857q.09.083.176.171a3 3 0 0 1 .176-.17c3.23-2.974
+                        9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01zM2.212
+                        10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265
+                        1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5" />
+                        <path
+                            d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162z" />
+                    </svg>
+                </div>
+                <h3 class="fs-4 text-body-emphasis mb-4">Combo Salud Felina/Canina</h3>
+                <p class="text-start">
+                    <strong>Incluye:</strong><br>
+                    Vacuna + desparasitación + revisión general<br>
+                    <strong>Precio especial:</strong> S/49.90<br>
+                    <strong>Válido para:</strong> perros y gatos menores de 1 año<br>
+                    📅 Promoción válida durante todo junio.
+                </p>
+                <button class="btn custom-btn mt-3">Obtener promoción</button>
+            </div>
+
+            <!-- PROMO 2 -->
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary custom-bg bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-hospital" viewBox="0 0 16 16">
+                        <path
+                            d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1zM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z" />
+                        <path
+                            d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1zm2 14h2v-3H7zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zm0-14H6v1h4zm2 7v7h3V8zm-8 7V8H1v7z" />
+                    </svg>
+                </div>
+                <h3 class="fs-4 text-body-emphasis mb-4">Día del Baño Gratis</h3>
+                <p class="text-start">
+                    <strong>Incluye:</strong> Por cada compra mayor a S/80 en productos para mascotas,<br>
+                    ¡llévate un baño gratis para tu engreído! 🛁🐶🐱<br><br>
+                    📍Disponible solo en local.
+                </p>
+                <button class="btn custom-btn mt-3">Solicitar ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <!--UBICACIONES-->
+    <div id="Aliados" class="container text-center">
+        <footer class="row py-5 my-5 border-top">
+            <h2 class="pb-2 border-bottom">ALIADOS</h2>
+            <div class="col-3 mb-3">
+                <h5>Mucky Veterinaria</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📍 C.
+                            Cantuarias
+                            361</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📞 957
+                            455
+                            619</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">🕒 Lunes
+                            a
+                            sábado: 9 AM - 7 PM; Domingo: 9 AM - 6 PM</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">🌐
+                            muckyveterinaria.com</a></li>
+                </ul>
+            </div>
+            <div class="col-3 mb-3">
+                <h5>SERVET</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📍 C.
+                            José Galvez
+                            431</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📞 (01)
+                            2426732</a></li>
+                </ul>
+            </div>
+            <div class="col-3 mb-3">
+                <h5>Clínica Veterinaria & Pet Shop Wawow</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📍 Av. 28
+                            de
+                            Julio 1274</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📞 (01)
+                            4800440</a></li>
+                </ul>
+            </div>
+            <div class="col-3 mb-3">
+                <h5>Veterinaria Mis Engreídos Pet Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📍 Ca.
+                            Enrique
+                            Palacios 739</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">📞 997
+                            589
+                            122</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">🌐
+                            veterinariamisengreidos.com</a></li>
+
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="tituloModal1">PLAN MENSUAL</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <h4 class="mb-3">Pago</h4>
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                        checked="" required="">
+                                    <label class="form-check-label" for="credit">Tarjeta de crédito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
+                                        required="">
+                                    <label class="form-check-label" for="debit">Tarjeta de débito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
+                                        required="">
+                                    <label class="form-check-label" for="paypal">PayPal</label>
+                                </div>
+                            </div>
+                            <div class="row gy-3">
+                                <div class="col-md-12">
+                                    <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
+                                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                                    <small class="text-body-secondary">Nombre completo tal como aparece en la
+                                        tarjeta</small>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="cc-number" class="form-label">Número de Tarjeta de Crédito</label>
+                                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                    <input type="text" class="form-control" id="cc-expiration" placeholder=""
+                                        required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="cc-cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                                </div>
+                            </div>
+                    </form>
+                </div>
+                <br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="abrirModal2()">Procesar Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #28a745; color: white;">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">¡Pago Exitoso!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="mb-3">
+                        <i class="icon-ok-circled" style="font-size: 64px; color: #28a745;"></i>
+                    </div>
+                    <h6>¡Gracias por tu compra!</h6>
+                    <p>Tu plan mensual ha sido activado exitosamente.</p>
+                    <div class="alert alert-success">
+                        <strong>Plan Mensual Pet</strong><br>
+                        Válido por: <strong>1 mes</strong><br>
+                        Monto pagado: <strong>S/. 29.90</strong>
+                    </div>
+                    <p class="small text-muted">
+                        Recibirás un email de confirmación en los próximos minutos.
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                        aria-label="Close">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Función para abrir el primer modal
+        function abrirModal1(plan) {
+            if (plan == 'mensual') {
+                document.querySelector("#tituloModal1").textContent = "PLAN MENSUAL";
+                window.planSeleccionado = 'mensual';
+            }
+            if (plan == 'anual') {
+                document.querySelector("#tituloModal1").textContent = "PLAN ANUAL";
+                window.planSeleccionado = 'anual';
+            }
+            const modal1Element = document.getElementById('exampleModalToggle');
+            const modal1 = bootstrap.Modal.getOrCreateInstance(modal1Element);
+            modal1.show();
+        }
+
+        // Función para abrir el segundo modal
+        function abrirModal2() {
+            // Actualizar el contenido del modal según el plan seleccionado
+            if (window.planSeleccionado === 'anual') {
+                document.querySelector("#exampleModalToggle2 .modal-body p").textContent = "Tu plan anual ha sido activado exitosamente.";
+                document.querySelector("#exampleModalToggle2 .alert-success").innerHTML = `
+                    <strong>Plan Anual Pet</strong><br>
+                    Válido por: <strong>12 meses</strong><br>
+                    Monto pagado: <strong>S/. 299.90</strong>
+                `;
+            } else {
+                document.querySelector("#exampleModalToggle2 .modal-body p").textContent = "Tu plan mensual ha sido activado exitosamente.";
+                document.querySelector("#exampleModalToggle2 .alert-success").innerHTML = `
+                    <strong>Plan Mensual Pet</strong><br>
+                    Válido por: <strong>1 mes</strong><br>
+                    Monto pagado: <strong>S/. 29.90</strong>
+                `;
+            }
+
+            // Primero liberar cualquier foco
+            document.activeElement?.blur();
+
+            const modal1Element = document.getElementById('exampleModalToggle');
+            const modal2Element = document.getElementById('exampleModalToggle2');
+
+            const modal1 = bootstrap.Modal.getOrCreateInstance(modal1Element);
+            const modal2 = bootstrap.Modal.getOrCreateInstance(modal2Element);
+
+            // Agregar listener para cuando modal1 se haya cerrado completamente
+            const handleModalHidden = function () {
+                // Remover el listener para evitar múltiples ejecuciones
+                modal1Element.removeEventListener('hidden.bs.modal', handleModalHidden);
+
+                // Mostrar modal2 después de un pequeño delay
+                setTimeout(() => {
+                    modal2.show();
+                }, 100);
+            };
+
+            // Agregar el listener
+            modal1Element.addEventListener('hidden.bs.modal', handleModalHidden);
+
+            // Cerrar modal1
+            modal1.hide();
+        }
+
+        // Función para cerrar el segundo modal
+        function cerrarModal2() {
+            const modal2Element = document.getElementById('exampleModalToggle2');
+            const modal2 = bootstrap.Modal.getOrCreateInstance(modal2Element);
+            modal2.hide();
+        }
+
+        // Función para procesar pago (alias de abrirModal2)
+        function procesarPago() {
+            abrirModal2();
+        }
+
+        // Hacer las funciones globales
+        window.abrirModal1 = abrirModal1;
+        window.abrirModal2 = abrirModal2;
+        window.cerrarModal2 = cerrarModal2;
+        window.procesarPago = procesarPago;
+    </script>
+</body>
+
+
+<style>
+    .mi-cuenta .list-group-item-check:hover,
+    .mi-cuenta .list-group-item {
+        background-color: #a35234 !important;
+        border: 1px solid #A6411C !important;
+        color: white !important
+    }
+
+    .mi-cuenta .botones-micuenta::selection {
+        background-color: #A6411C;
+        border: 1px solid #A6411C;
+        color: white
+    }
+
+    * {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .padding-quienes-somos {
+        margin-top: 100px;
+        font-size: 50px;
+        padding: 0 50px 0 50px;
+    }
+
+    .menu {
+        background-color: #B9DDEA;
+
+    }
+
+    .item-seleccionado {
+        background-color: #BF604B;
+        color: #ffff;
+        font-weight: 500;
+    }
+
+    .item-seleccionado:hover,
+    .item-seleccionado:focus {
+        background-color: #F28444;
+        color: #ffff;
+
+    }
+
+    .item-menu {
+        color: #0E1140;
+        font-weight: 500;
+    }
+
+    .list-group {
+        width: 100%;
+        max-width: 460px;
+        margin-inline: 1.5rem;
+    }
+
+    .form-check-input:checked+.form-checked-content {
+        opacity: .5;
+    }
+
+    .form-check-input-placeholder {
+        border-style: dashed;
+    }
+
+    [contenteditable]:focus {
+        outline: 0;
+    }
+
+    .list-group-checkable .list-group-item {
+        cursor: pointer;
+    }
+
+    .list-group-item-check {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .list-group-item-check:hover+.list-group-item {
+        background-color: var(--bs-secondary-bg);
+    }
+
+    .list-group-item-check:checked+.list-group-item {
+        color: #fff;
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+
+    .list-group-item-check[disabled]+.list-group-item,
+    .list-group-item-check:disabled+.list-group-item {
+        pointer-events: none;
+        filter: none;
+        opacity: .5;
+    }
+
+    .list-group-radio .list-group-item {
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .list-group-radio .form-check-input {
+        z-index: 2;
+        margin-top: -.5em;
+    }
+
+    .list-group-radio .list-group-item:hover,
+    .list-group-radio .list-group-item:focus {
+        background-color: var(--bs-secondary-bg);
+    }
+
+    .list-group-radio .form-check-input:checked+.list-group-item {
+        background-color: var(--bs-body);
+        border-color: var(--bs-primary);
+        box-shadow: 0 0 0 2px var(--bs-primary);
+    }
+
+    .list-group-radio .form-check-input[disabled]+.list-group-item,
+    .list-group-radio .form-check-input:disabled+.list-group-item {
+        pointer-events: none;
+        filter: none;
+        opacity: .5;
+    }
+
+    .perfilpet {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #F28444;
+    }
+
+    .btn-wsp {
+        position: fixed;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        bottom: 30px;
+        right: 30px;
+        background: #0df053;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+    }
+
+    .btn-wsp:hover {
+        text-decoration: none;
+        color: #0df053;
+        background: #fff;
+    }
+
+    .feature-icon {
+
+        width: 4rem;
+        height: 4rem;
+        border-radius: .75rem;
+    }
+
+    .icon-link>.bi {
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        margin-left: .25rem;
+        transition: transform .2s;
+    }
+
+    .icon-link:hover>.bi {
+        transform: translateX(.25rem);
+    }
+
+    .custom-bg {
+        background-color: #a35234 !important;
+    }
+
+    .custom-btn {
+        background-color: #a35234;
+        border: none;
+        color: white;
+    }
+
+    .custom-btn:hover {
+        background-color: #F28444;
+    }
+</style>
+
+</html>

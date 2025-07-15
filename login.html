@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <main class="form-signin w-100 m-auto">
+        <div>
+            <img class="mb-4 mx-auto d-block" src="img/logo.PNG" alt="" width="200" height="200">
+            <h1 class="mb-4 mx-auto d-block text-center bienvenidos">¡Bienvenido!</h1>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com">
+                <label for="floatingInput">Correo Electronico</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" value="" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+            </div>
+
+            <button class="btn btn-primary w-100 py-2 iniciar" id="iniciar_sesion" onclick="iniciar()">Iniciar
+                Sesion</button>
+            <p class="mt-5 mb-3 text-body-secondary">© 2017–2025</p>
+        </div>
+    </main>
+</body>
+
+<script>
+
+    iniciar = () => {
+
+        let correo = document.querySelector("#correo").value;
+        let password = document.querySelector("#password").value;
+        const registrado = localStorage.getItem("user")
+        const registradoData = JSON.parse(registrado)
+
+        if (correo == "" || password == "") {
+            alert("correo o password en blanco");
+            return
+        }
+
+        if (correo == registradoData.correo && password == registradoData.password) {
+            window.location.href = "micuenta.html";
+
+        } else {
+            alert("Credenciales incorrectas");
+            return
+        }
+
+    };
+
+
+</script>
+
+</html>
+
+<style>
+    .bg-body-tertiary {
+        --bs-bg-opacity: 1;
+        background-color: #B9DCE9 !important;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 1rem;
+    }
+
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+
+    }
+
+    .iniciar {
+        background-color: #F28444;
+        border: 1px solid #F28444;
+    }
+
+    .iniciar:hover,
+    .iniciar:focus {
+        background-color: #BF604B !important;
+        border: 1px solid #BF604B !important;
+        color: #ffff;
+
+    }
+
+    .bienvenidos {
+        color: #0E1140 !important;
+    }
+</style>

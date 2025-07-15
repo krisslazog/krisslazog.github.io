@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!--MENU-->
+    <header class="menu d-flex justify-content-end">
+        <div class="col-lg-4">
+            <a href="index.html">
+                <img class="d-block mb-1" alt="" src="img/logo.PNG" width="100" height="100">
+            </a>
+        </div>
+        <ul class="nav nav-pills col-lg-8 justify-content-end  py-4">
+            <li class="nav-item">
+                <a href="index.html" class="item-menu nav-link" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item ">
+                <a href="login.html" class="item-seleccionado nav-link">Registrate</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <main>
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis">Registrate</h1>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <div class="col-sm-12">
+                                <label for="firstName" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="" value="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" placeholder="" value="">
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="firstName" class="form-label">Correo:</label>
+                                <input type="email" class="form-control" id="correo" placeholder="" value="">
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="lastName" class="form-label">Contraseña:</label>
+                                <input type="password"" class=" form-control" id="password" placeholder="" value="">
+                            </div>
+                            <div class="col-12">
+                                <label for="username" class="form-label">Nro Celular</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="celular" placeholder="" value="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="tipo" class="form-label">Tipo de Mascota </label>
+                                <input type="text" class="form-control" id="tipo">
+                            </div>
+                            <div class="col-12">
+                                <label for="nombre_mascota" class="form-label">Nombre de Mascota</label>
+                                <input type="text" class="form-control" id="nombre_mascota">
+
+                            </div>
+                            <div class="col-12">
+                                <label for="distrito" class="form-label">Distrito</label>
+                                <input type="text" class="form-control" id="distrito">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="plan" class="form-label">Plan Elegido</label>
+                                <select class="form-select" id="plan">
+                                    <option value="mensual">Plan Mensual</option>
+                                    <option value="anual">Plan Anual</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <hr class="my-4">
+                        <button class="w-100 btn btn-primary btn-lg" type="button"
+                            onclick="registrate()">Registrate</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-8">
+                    <img class="img-fluid w-100" alt="registrate" src="img/registrate.png">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+
+    registrate = () => {
+
+        let correo = document.querySelector("#correo").value;
+        let password = document.querySelector("#password").value;
+        let nombre = document.querySelector("#nombre").value;
+        let apellido = document.querySelector("#apellido").value;
+        let celular = document.querySelector("#celular").value;
+        let tipo = document.querySelector("#tipo").value;
+        let nombre_mascota = document.querySelector("#nombre_mascota").value;
+        let distrito = document.querySelector("#distrito").value;
+        let plan = document.querySelector("#plan").value;
+
+
+
+        if (correo == "" || password == "") {
+            alert("Correo y contraseña son obligatorios");
+            return
+        }
+
+        if (correo != "" && password != "") {
+            console.log("correcto");
+            const userObj = {
+                correo: correo,
+                password: password,
+                nombre: nombre,
+                apellido: apellido,
+                celular: celular,
+                tipo: tipo,
+                nombre_mascota: nombre_mascota,
+                distrito: distrito,
+                plan: plan,
+            }
+            localStorage.setItem('user', JSON.stringify(userObj))
+        }
+        // ✅ Mensaje de éxito y redirección
+        alert("¡Registro exitoso!");
+        window.location.href = "index.html";
+
+    };
+
+
+</script>
+
+</html>
+<style>
+    * {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .padding-quienes-somos {
+        margin-top: 100px;
+        font-size: 50px;
+        padding: 0 50px 0 50px;
+    }
+
+    .menu {
+        background-color: #B9DDEA;
+
+    }
+
+    .item-seleccionado {
+        background-color: #BF604B;
+        color: #ffff;
+        font-weight: 500;
+    }
+
+    .item-seleccionado:hover,
+    .item-seleccionado:focus {
+        background-color: #F28444;
+        color: #ffff;
+
+    }
+
+    .item-menu {
+        color: #0E1140;
+        font-weight: 500;
+    }
+</style>
